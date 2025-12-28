@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flowup Academy | Ingresar</title>
+  <meta name="description" content="Ingresá a tu cuenta de Flowup Academy para acceder a cursos y recursos de SAP.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+
+<body>
+
+  <!-- HEADER / NAVBAR -->
+  <header class="site-header">
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <a class="navbar-brand logo" href="../index.html">Flowup Academy</a>
+
+        <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+          data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto gap-lg-2">
+            <li class="nav-item"><a class="nav-link" href="../index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="../pages/cursos.html">Cursos</a></li>
+            <li class="nav-item"><a class="nav-link" href="../pages/nosotros.html">Nosotros</a></li>
+            <li class="nav-item"><a class="nav-link" href="../pages/contacto.html">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link is-active" href="../pages/ingresar.html">Ingresar</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN -->
+  <main class="auth-page">
+
+    <section class="auth-section">
+      <div class="container">
+        <div class="auth-card">
+
+          <div class="auth-head">
+            <p class="auth-brand">FLOWUP</p>
+            <h1 class="auth-title">Acceder a la plataforma</h1>
+            <p class="auth-subtitle">Ingresá con tu cuenta para ver tus cursos y recursos.</p>
+          </div>
+
+          <a class="auth-google" href="#">
+            <img src="../imagenes/iconogoogle.png" alt="logo de google" class="google-icon">
+            <span>Continuar con Google</span>
+          </a>
+
+          <div class="auth-divider">
+            <span>o</span>
+          </div>
+
+          <!-- Form -->
+          <form class="auth-form" action="#" method="post" novalidate>
+            <div class="auth-field">
+              <label for="email" class="auth-label">Email</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                class="auth-input"
+                placeholder="tuemail@dominio.com"
+                autocomplete="email"
+                required
+              />
+            </div>
+
+            <div class="auth-field">
+              <label for="password" class="auth-label">Contraseña</label>
+
+              <div class="auth-password">
+                <input
+                  id="password"
+                  name="password"
+                  type="password"
+                  class="auth-input"
+                  placeholder="Tu contraseña"
+                  autocomplete="current-password"
+                  required
+                />
+                <button class="auth-eye" type="button" aria-label="Mostrar u ocultar contraseña">
+                  👁
+                </button>
+              </div>
+            </div>
+
+            <div class="auth-row">
+              <label class="auth-check">
+                <input type="checkbox" name="remember" />
+                <span>Recordarme</span>
+              </label>
+
+              <a class="auth-link" href="#">Olvidé mi contraseña</a>
+            </div>
+
+            <button class="auth-submit" type="submit" disabled>Ingresar</button>
+
+            <p class="auth-foot">
+              ¿No tenés cuenta?
+              <a class="auth-link" href="#">Crear cuenta</a>
+            </p>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="mb-1"><strong>Flowup Academy</strong></p>
+      <p class="mb-1">Capacitación en SAP</p>
+      <p class="mb-0">© 2025 Flowup Academy. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <!-- (Opcional) JS mini para el ojito (si lo querés real) -->
+  <script>
+    const btn = document.querySelector(".auth-eye");
+    const input = document.querySelector("#password");
+    if (btn && input) {
+      btn.addEventListener("click", () => {
+        input.type = input.type === "password" ? "text" : "password";
+      });
+    }
+  </script>
+</body>
+</html>
